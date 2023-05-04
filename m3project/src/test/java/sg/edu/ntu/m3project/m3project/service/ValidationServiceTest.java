@@ -16,7 +16,7 @@ public class ValidationServiceTest {
   @Test
 	public void givenNameIsEmpty_whenMethodIsCalled_thenThrowException() throws Exception {
     Exception exception = assertThrows(Exception.class, () -> {
-			service.validateName("a");
+			service.validateName("");
 	});
 		String expectedMessage = "Name cannot be empty";
 		String actualMessage = exception.getMessage();
